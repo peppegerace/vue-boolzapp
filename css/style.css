@@ -1,9 +1,26 @@
+/* CUSTOM PROPERTIES */
+:root {
+  --bg-green: #009688;
+  --bg-grey: #d9dbd4;
+  --lightgrey: #eaeaea;
+  --lightblue: #8edafc;
+  --lightgreen: #d5f9ba;
+  --grey:#b1b1b1;
+  --darkgrey: #6b7376;
+}
+
+/* GENERAL PROPERTIES */
 body {
-  background: linear-gradient(#009688 15vh, #d9dbd4 15vh);
+  background: linear-gradient(var(--bg-green) 15vh, var(--bg-grey) 15vh);
   height: 100vh;
 }
 
-.container {
+a {
+  text-decoration: none;
+}
+
+/* STRUCTURE PAGE */
+.container-gg {
   background-color: rgb(255, 255, 255);
   width: 95%;
   max-width: 1320px;
@@ -11,3 +28,88 @@ body {
   margin: 2vh auto;
 }
 
+#sidebar {
+  width: 35%;
+  /* background-color: chartreuse; */
+}
+
+.chat {
+  width: 65%;
+  background-color: cadetblue;
+}
+
+/* SIDEBAR */
+/* TOP SIDEBAR */
+.top-user {
+  background-color: var(--lightgrey);
+}
+
+.top-user-img img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.top-user-icon a i {
+  font-size: 1.2rem;
+  margin-right: 12px;
+  color: var(--grey);
+}
+
+.top-notifications {
+  background-color: var(--lightblue);
+  height: 70px;
+}
+
+.top-notifications i {
+  background-color: white;
+  color: var(--lightblue);
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.notifications-desktop a{
+  font-size: 0.7rem;
+  color: var(--darkgrey);
+  text-decoration: underline;
+}
+
+.searchbar {
+  background-color: #fafafa;
+  border-bottom: 1px solid var(--bg-grey);
+}
+
+.searchbar i,
+.searchbar input {
+  color: var(--grey);
+}
+
+/* BOTTOM SIDEBAR */
+.bottom {
+  background-color: white;
+  height: 70%;
+  overflow: auto;
+}
+
+.chat-user {
+  border-bottom: 1px solid var(--grey);
+}
+
+.chat-user:hover {
+  background-color: var(--lightgrey);
+  cursor: pointer;
+}
+
+.chat-user-img img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.chat-user-info .last-message,
+.chat-user-right .message-date {
+  font-size: 0.7rem;
+  color: var(--grey);
+}

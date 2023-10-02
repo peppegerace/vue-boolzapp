@@ -8,8 +8,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- bootstrap -->
-  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
   <!-- vue.js -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
@@ -21,11 +21,83 @@
 </head>
 <body>
 
-  <div class="container" id="app">
+  <div class="container-gg d-flex flex-row" id="app">
 
-    <aside id="sidebar"></aside>
+    <aside id="sidebar">
+      
+      <div class="top">
 
-    <div class="chat"></div>
+        <div class="top-user d-flex justify-content-between p-2 align-items-center ">
+
+          <div class="top-user-img">
+            <img src="img/avatar_io.jpg" alt="avatar">
+            <span>Sofia</span>
+          </div>
+
+          <div class="top-user-icon">
+            <a href="#">
+              <i class="fa-solid fa-circle-notch"></i>
+            </a>
+            <a href="#">
+              <i class="fa-solid fa-message"></i>
+            </a>
+            <a href="#">
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </a>
+          </div>
+
+        </div>
+
+        <div class="top-notifications d-flex align-items-center p-3 ">
+          <i class="fa-solid fa-bell-slash me-2"></i>
+
+          <div class="notifications-desktop d-flex flex-column">
+            <span>Ricevi notiviche di nuovi messaggi</span>
+            <span><a href="#">Attiva notifiche desktop</a></span>
+          </div>
+
+        </div>
+
+        <div class="searchbar p-2 ">
+          <div class="input-group bg-white ">
+            <span class="input-group-text bg-white"><i class="fa-solid fa-magnifying-glass "></i></span>
+            <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat">
+          </div>    
+        </div>
+
+      </div>
+
+      <div class="bottom">
+
+        <div class="chat-user p-3 d-flex flex-row justify-content-between ">
+
+          <div class="chat-user-left d-flex flex-row ">
+
+            <div class="chat-user-img me-3 ">
+              <img src="img/avatar_1.jpg" alt="">
+            </div>
+
+            <div class="chat-user-info d-flex flex-column ">
+              <span>Michele</span>
+              <span class="last-message">Ultimo messaggio</span>
+            </div>
+
+          </div>
+
+          <div class="chat-user-right">
+            <span class="message-date">12:00</span>
+          </div>
+
+        </div>
+        
+
+      </div>
+
+    </aside>
+
+    <div class="chat">
+
+    </div>
 
   </div>
   
