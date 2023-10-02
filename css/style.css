@@ -1,0 +1,13 @@
+body {
+  background: linear-gradient(#009688 15vh, #d9dbd4 15vh);
+  height: 100vh;
+}
+
+.container {
+  background-color: rgb(255, 255, 255);
+  width: 95%;
+  max-width: 1320px;
+  height: 95%;
+  margin: 2vh auto;
+}
+
