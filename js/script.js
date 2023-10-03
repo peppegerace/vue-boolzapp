@@ -197,6 +197,15 @@ createApp ({
             status: 'sent'
         });
 
+        setTimeout(() =>{
+            currentMessage.messages.push({
+                date: new Date().toLocaleString(),
+                message: 'Ciao',
+                status: 'received'
+            });
+            console.log('visualizzo dopo due secondi')
+        }, 2000);
+        
         this.newMessage = ''
     }
 
