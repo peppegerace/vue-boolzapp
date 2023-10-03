@@ -167,11 +167,16 @@ createApp ({
             ],
         }
     ],
-  
+    counterMessage: 0,
     }
   },
 
   methods:{
+
+    // metodo per modificare il valore del counter
+    messageDisplayed(index) {
+        this.counterMessage = index;
+    }
 
   },
 
