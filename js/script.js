@@ -168,6 +168,7 @@ createApp ({
         }
     ],
     counterMessage: 0,
+    newMessage: ''
     }
   },
 
@@ -176,6 +177,27 @@ createApp ({
     // metodo per modificare il valore del counter
     messageDisplayed(index) {
         this.counterMessage = index;
+    },
+
+    // metodo per aggiungere messaggi alla conversazione corrente
+    addMessage() {
+        // variabile per prendere il valore dell'input
+        const newMessage = this.newMessage.trim();
+        // condizione di validità del messaggio
+        if (!newMessage) {
+            return;
+        }
+
+        // aggiungo il nuovo messaggio all'array del contatto corrente
+        const currentMessage = this.contacts[this.counterMessage];
+
+        currentMessage.messages.push({
+            date: new Date().toLocaleString(),
+            message: newMessage,
+            status: 'sent'
+        });
+
+        this.newMessage = ''
     }
 
   },

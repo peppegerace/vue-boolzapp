@@ -175,7 +175,14 @@
           </div>
 
           <div class="col">
-            <input class="form-control " type="text" placeholder="Scrivi un messaggio">
+            <!-- uso v-model per agganciarmi alla variabile di javascript e passargli il valore -->
+            <!-- uso @keyup.enter per scatenare la funzione addMessage -->
+            <input
+              class="form-control "
+              type="text"
+              placeholder="Scrivi un messaggio"
+              v-model="newMessage"
+              @keyup.enter="addMessage">
           </div>
 
           <div class="col-1 text-center ">
