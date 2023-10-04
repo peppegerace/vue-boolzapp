@@ -130,7 +130,7 @@ a {
 
 .main-chat {
   height: calc(100% - 120px);
-  background-image: url(/img/mine.jpg);
+  background-image: url(../img/mine.jpg);
   overflow: scroll;
   padding: 20px 50px;
 }
