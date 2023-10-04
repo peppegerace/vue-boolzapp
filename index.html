@@ -79,6 +79,7 @@
         <!-- al click sul contatto generato mostro la chat corrispondente nella main-chat -->
       <div
           class="chat-user p-3 d-flex flex-row justify-content-between"
+          :class="{'active' : index === counterMessage}"
           v-for="(contact, index) in contacts"
           :key="index"
           @click="messageDisplayed(index)">

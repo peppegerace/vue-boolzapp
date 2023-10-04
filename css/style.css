@@ -97,10 +97,12 @@ a {
   overflow: auto;
 }
 
+
 .chat-user {
   border-bottom: 1px solid var(--grey);
 }
 
+.active,
 .chat-user:hover {
   background-color: var(--lightgrey);
   cursor: pointer;
@@ -152,7 +154,8 @@ a {
 }
 
 .text {
-  width: 40%;
+  min-width: 40%;
+  max-width: 60%;
   padding: 10px;
   border-radius: 10px;
   position: relative;
