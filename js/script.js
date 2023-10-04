@@ -168,7 +168,8 @@ createApp ({
         }
     ],
     counterMessage: 0,
-    newMessage: ''
+    newMessage: '',
+    searchText: ''
     }
   },
 
@@ -224,6 +225,13 @@ createApp ({
 
   },
 
+  computed: {
+    filteredContacts() {
+        return this.contacts.filter((contact) =>
+          contact.name.toLowerCase().includes(this.searchText.toLowerCase())
+        );
+      },
+  },
 
   mounted() {
 
