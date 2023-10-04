@@ -162,6 +162,28 @@ a {
   font-size: 0.9rem;
 }
 
+.dropstart {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+}
+
+
+.btn-chevron {
+  background-color: transparent;
+  border: none;
+  display: none;  
+  color: var(--grey)
+}
+
+.btn-chevron:hover {
+  display: block;
+}
+
+.text:hover button {
+  display: inline-block;
+}
+
 .sent {
   background-color: var(--lightgreen); 
 }

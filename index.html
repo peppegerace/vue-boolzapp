@@ -66,7 +66,10 @@
         <div class="searchbar p-2 ">
           <div class="input-group bg-white ">
             <span class="input-group-text bg-white"><i class="fa-solid fa-magnifying-glass "></i></span>
-            <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Cerca o inizia una nuova chat">
           </div>    
         </div>
 
@@ -93,13 +96,13 @@
 
             <div class="chat-user-info d-flex flex-column ">
               <span>{{ contact.name }}</span>
-              <span class="last-message">Ultimo messaggio</span>
+              <span class="last-message"> {{ getLastMessage(contact) }} </span>
             </div>
 
           </div>
 
           <div class="chat-user-right">
-            <span class="message-date">12:00</span>
+            <span class="message-date"> {{ getLastDate(contact) }} </span>
           </div>
 
         </div>
@@ -157,6 +160,21 @@
             <span>{{ message.message }}</span>
             <!-- stampo la data corrispondente  -->
             <span class="message-time">{{ message.date }}</span>
+            <!-- <button class=""><i class="fa-solid fa-chevron-down"></i></button> -->
+            <div class="dropstart">
+              <button class="btn-chevron" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    @click="removeMessage(counterMessage, messageIndex)">Cancella nessaggio</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Info messaggio</a></li>
+              </ul>
+            </div>
           </div>
 
         </div>

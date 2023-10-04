@@ -207,9 +207,23 @@ createApp ({
         }, 2000);
         
         this.newMessage = ''
-    }
+    },
+
+    getLastMessage(contact) {
+        return contact.messages.at(-1).message;
+    },
+
+    getLastDate(contact) {
+        return contact.messages.at().date;
+    },
+
+    removeMessage(contactIndex, messageIndex) {
+        const contact = this.contacts[contactIndex];
+        contact.messages.splice(messageIndex, 1);
+      },
 
   },
+
 
   mounted() {
 
