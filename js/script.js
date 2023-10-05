@@ -4,13 +4,13 @@ createApp ({
 
   data() {
     return {
-      contacts: [
-        {
-            name: 'Michele',
-            avatar: './img/avatar_1.jpg',
-            visible: true,
-            messages: [
-                {
+        visible: true,
+        contacts: [
+          {
+              name: 'Michele',
+              avatar: './img/avatar_1.jpg',
+        messages: [
+            {
                     date: '10/01/2020 15:30:55',
                     message: 'Hai portato a spasso il cane?',
                     status: 'sent'
@@ -210,12 +210,21 @@ createApp ({
         this.newMessage = ''
     },
 
+
     getLastMessage(contact) {
-        return contact.messages.at(-1).message;
-    },
+        if (contact.messages.length > 0) {
+          return contact.messages[contact.messages.length - 1].message;
+        } else {
+          return ''; 
+        }
+      },
 
     getLastDate(contact) {
-        return contact.messages.at().date;
+        if (contact.messages.length > 0) {
+            return contact.messages[contact.messages.length - 1].date;
+          } else {
+            return ''; 
+          }
     },
 
     removeMessage(contactIndex, messageIndex) {
